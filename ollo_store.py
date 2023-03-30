@@ -9,10 +9,10 @@ import undetected_chromedriver as uc
 load_dotenv()
 
 # Constants | Variables
-RYZEN_NAME = "Ryzen 9 7950X3D 5,7 GHz (Raphael) AM5 - boxed"
-STORE_URL = "https://www.caseking.de/amd-ryzen-9-7950x3d-5-7-ghz-raphael-am5-boxed-hpam-259.html?__shop=2"
-STORE_NAME = "CASEKING"
-NOT_IN_STOCK_TEXT = "not in stock"
+RYZEN_NAME = "AMD Ryzen 9 7950X3D 4,2 GHz 128 MB L3"
+STORE_URL = "https://www.ollo.it/amd-ryzen-9-7950x3d-4-2-ghz-128-mb-l3/p_875596?utm_campaign=tradetracker-pla&utm_medium=RedBrain%20IT&utm_source=TradeTracker"
+STORE_NAME = "OLLOSTORE"
+NOT_IN_STOCK_TEXT = "Attualmente non disponibile"
 BACK_IN_STOCK_MESSAGE = os.environ['BACK_IN_STOCK_NAME']
 ALERT_TEXT = STORE_NAME + " - " + BACK_IN_STOCK_MESSAGE + " - " + STORE_URL
 
@@ -31,13 +31,9 @@ soup = BeautifulSoup(driver.page_source, features="lxml")
 body = soup.body
 
 # Getting our specific element
-ryzen_element = ""
-products_list = body.find_all("div", {"class": "right grid_14 first last"})
-for product in products_list:
-    product_text = product.get_text()
-    if RYZEN_NAME in product_text:
-        ryzen_element = product_text
+product = body.find("div", {"class": "product-name-container"})
+product_text = product.get_text()
 
-if NOT_IN_STOCK_TEXT not in ryzen_element:
+if NOT_IN_STOCK_TEXT not in product_text:
     message = client.messages.create(body=ALERT_TEXT, from_=SENDER_NUMBER, to=RECIVER_NUMBER)
     print(message.sid)

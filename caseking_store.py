@@ -9,10 +9,10 @@ import undetected_chromedriver as uc
 load_dotenv()
 
 # Constants | Variables
-RYZEN_NAME = "AMD Ryzen™ 9 7950X3D Processor"
-STORE_URL = "https://www.amd.com/en/direct-buy/it"
-STORE_NAME = "AMD STORE"
-NOT_IN_STOCK_TEXT = "Out of Stock"
+RYZEN_NAME = "Ryzen 9 7950X3D 5,7 GHz (Raphael) AM5 - boxed"
+STORE_URL = "https://www.caseking.de/amd-ryzen-9-7950x3d-5-7-ghz-raphael-am5-boxed-hpam-259.html?__shop=2"
+STORE_NAME = "CASEKING"
+NOT_IN_STOCK_TEXT = "not in stock"
 BACK_IN_STOCK_MESSAGE = os.environ['BACK_IN_STOCK_NAME']
 ALERT_TEXT = STORE_NAME + " - " + BACK_IN_STOCK_MESSAGE + " - " + STORE_URL
 
@@ -32,12 +32,12 @@ body = soup.body
 
 # Getting our specific element
 ryzen_element = ""
-products_list = body.find_all("div", {"class": "direct-buy"})
+products_list = body.find_all("div", {"class": "right grid_14 first last"})
 for product in products_list:
     product_text = product.get_text()
     if RYZEN_NAME in product_text:
         ryzen_element = product_text
 
-if NOT_IN_STOCK_TEXT not in ryzen_element:
+if NOT_IN_STOCK_TEXT in ryzen_element:
     message = client.messages.create(body=ALERT_TEXT, from_=SENDER_NUMBER, to=RECIVER_NUMBER)
     print(message.sid)

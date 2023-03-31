@@ -1,0 +1,64 @@
+{
+  "stores": [
+    {
+      "store_name": "AMD STORE",
+      "link": "https://www.amd.com/en/direct-buy/it",
+      "product_name": "AMD Ryzen™ 9 7950X3D Processor",
+      "not_in_stock_text": "Out of Stock",
+      "element_to_search": "div",
+      "type_to_search": "class",
+      "class_or_id_to_search": "direct-buy",
+      "is_list": true
+    },
+    {
+      "store_name": "CASEKING",
+      "link": "https://www.caseking.de/amd-ryzen-9-7950x3d-5-7-ghz-raphael-am5-boxed-hpam-259.html?__shop=2",
+      "product_name": "Ryzen 9 7950X3D 5,7 GHz (Raphael) AM5 - boxed",
+      "not_in_stock_text": "not in stock",
+      "element_to_search": "div",
+      "type_to_search": "class",
+      "class_or_id_to_search": "right grid_14 first last",
+      "is_list": false
+    },
+    {
+      "store_name": "ALZASTORE",
+      "link": "https://www.alza.cz/EN/amd-ryzen-9-7950x3d-d7665222.htm",
+      "product_name": "AMD Ryzen 9 7950X3D",
+      "not_in_stock_text": "We accept pre-orders",
+      "element_to_search": "span",
+      "type_to_search": "class",
+      "class_or_id_to_search": "stcStock avlVal avl4 none",
+      "is_list": false
+    },
+    {
+      "store_name": "OLLOSTORE",
+      "link": "https://www.ollo.it/amd-ryzen-9-7950x3d-4-2-ghz-128-mb-l3/p_875596?utm_campaign=tradetracker-pla&utm_medium=RedBrain%20IT&utm_source=TradeTracker",
+      "product_name": "AMD Ryzen 9 7950X3D 4,2 GHz 128 MB L3",
+      "not_in_stock_text": "Attualmente non disponibile",
+      "element_to_search": "div",
+      "type_to_search": "class",
+      "class_or_id_to_search": "product-name-container",
+      "is_list": false
+    },
+    {
+      "store_name": "CYBERTEK",
+      "link": "https://www.cybertek.fr/processeur/amd/131118.aspx",
+      "product_name": "Processeur AMD Ryzen 9 7950X3D - 5.7GHz/144Mo/AM5/BOX",
+      "not_in_stock_text": "Dispo à partir du",
+      "element_to_search": "div",
+      "type_to_search": "id",
+      "class_or_id_to_search": "_ctl0_ContentPlaceHolder1_dv_menu_fiche_prix",
+      "is_list": false
+    },
+    {
+      "store_name": "BRACK.CH",
+      "link": "https://www.brack.ch/amd-cpu-ryzen-9-7950x3d-4-2-ghz-1520431",
+      "product_name": "CPU Ryzen 9 7950X3D 4.2 GHz",
+      "not_in_stock_text": "Bei Verfügbarkeit benachrichtigen",
+      "element_to_search": "div",
+      "type_to_search": "class",
+      "class_or_id_to_search": "productStage__infoColumn",
+      "is_list": false
+    }
+  ]
+}

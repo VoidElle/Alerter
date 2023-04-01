@@ -1,4 +1,5 @@
 {
+  "waiting_time_s": 5,
   "stores": [
     {
       "store_name": "AMD STORE",
@@ -58,6 +59,26 @@
       "element_to_search": "div",
       "type_to_search": "class",
       "class_or_id_to_search": "productStage__infoColumn",
+      "is_list": false
+    },
+        {
+      "store_name": "CLOUDMARKT",
+      "link": "https://www.cloudmarkt.de/amdprozessoren-100-100000908wof",
+      "product_name": "Ryzen 9 7950X3D - 4.2 GHz - 16 Kerne - 32 Threads",
+      "not_in_stock_text": "Nicht lieferbar",
+      "element_to_search": "div",
+      "type_to_search": "class",
+      "class_or_id_to_search": "product--buybox block",
+      "is_list": false
+    },
+    {
+      "store_name": "LDLC",
+      "link": "https://www.ldlc.com/it-it/scheda/PB00544137.html",
+      "product_name": "AMD Ryzen 9 7950X3D (4,2 GHz / 5,7 GHz)\n",
+      "not_in_stock_text": "Rottura",
+      "element_to_search": "div",
+      "type_to_search": "class",
+      "class_or_id_to_search": "sbloc product-bloc",
       "is_list": false
     }
   ]

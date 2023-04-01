@@ -1,0 +1,50 @@
+{
+  "AMD STORE": {
+    "found": false,
+    "price_found": null,
+    "time_found": null,
+    "last_check": null
+  },
+  "CASEKING": {
+    "found": false,
+    "price_found": null,
+    "time_found": null,
+    "last_check": null
+  },
+  "ALZASTORE": {
+    "found": false,
+    "price_found": null,
+    "time_found": null,
+    "last_check": null
+  },
+  "OLLOSTORE": {
+    "found": false,
+    "price_found": null,
+    "time_found": null,
+    "last_check": null
+  },
+  "CYBERTEK": {
+    "found": false,
+    "price_found": null,
+    "time_found": null,
+    "last_check": null
+  },
+  "BRACK.CH": {
+    "found": false,
+    "price_found": null,
+    "time_found": null,
+    "last_check": null
+  },
+  "CLOUDMARKT": {
+    "found": false,
+    "price_found": null,
+    "time_found": null,
+    "last_check": null
+  },
+  "LDLC": {
+    "found": false,
+    "price_found": null,
+    "time_found": null,
+    "last_check": null
+  }
+}

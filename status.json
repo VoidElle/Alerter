@@ -3,48 +3,56 @@
         "found": false,
         "actual_price": null,
         "time_found": null,
-        "last_check": "01/04/2023 12:50:05"
+        "last_check": "01/04/2023 12:50:05",
+        "warning": null
     },
     "CASEKING": {
         "found": false,
         "actual_price": null,
         "time_found": null,
-        "last_check": "01/04/2023 12:50:08"
+        "last_check": "01/04/2023 12:50:08",
+        "warning": null
     },
     "ALZASTORE": {
         "found": false,
         "actual_price": null,
         "time_found": null,
-        "last_check": "01/04/2023 12:50:10"
+        "last_check": "01/04/2023 12:50:10",
+        "warning": null
     },
     "OLLOSTORE": {
         "found": false,
         "actual_price": null,
         "time_found": null,
-        "last_check": "01/04/2023 12:50:14"
+        "last_check": "01/04/2023 12:50:14",
+        "warning": null
     },
     "CYBERTEK": {
         "found": false,
         "actual_price": null,
         "time_found": null,
-        "last_check": "01/04/2023 12:50:16"
+        "last_check": "01/04/2023 12:50:16",
+        "warning": null
     },
     "BRACK.CH": {
         "found": false,
         "actual_price": null,
         "time_found": null,
-        "last_check": "01/04/2023 12:50:18"
+        "last_check": "01/04/2023 12:50:18",
+        "warning": null
     },
     "CLOUDMARKT": {
         "found": false,
         "actual_price": null,
         "time_found": null,
-        "last_check": "01/04/2023 12:50:20"
+        "last_check": "01/04/2023 12:50:20",
+        "warning": null
     },
     "LDLC": {
         "found": false,
         "actual_price": null,
         "time_found": null,
-        "last_check": "01/04/2023 12:50:21"
+        "last_check": "01/04/2023 12:50:21",
+        "warning": null
     }
 }

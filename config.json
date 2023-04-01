@@ -1,4 +1,5 @@
 {
+  "n_tries": 5,
   "waiting_time_s": 5,
   "stores": [
     {

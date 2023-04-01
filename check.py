@@ -18,6 +18,8 @@ log_file_data = json.load(log_file_read)
 log_file_read.close()
 
 waiting_time = config_data["waiting_time_s"]
+n_tries = config_data["n_tries"]
+
 stores = config_data["stores"]
 
 driver = uc.Chrome()
@@ -50,40 +52,62 @@ for store in stores:
         print("INFO: Mode list check")
 
         products_list = body.find_all(element_to_search, {type_to_search: class_or_id_to_search})
-        while products_list is None:
-            print("INFO: Product not found, waiting " + waiting_time + "s and restarting the search...")
-            time.sleep(waiting_time)
-            soup = BeautifulSoup(driver.page_source, features="lxml")
-            body = soup.body
-            products_list = body.find_all(element_to_search, {type_to_search: class_or_id_to_search})
 
-        for product in products_list:
-            product_text = product.get_text()
-            if product_name in product_text:
-                product_element = product_text
+        current_try = 0
+        while products_list is None:
+            if current_try <= n_tries:
+                print("DEBUG: CURRENT TRY " + str(current_try))
+                print("INFO: Product not found, waiting " + waiting_time + "s and restarting the search...")
+                time.sleep(waiting_time)
+                soup = BeautifulSoup(driver.page_source, features="lxml")
+                body = soup.body
+                products_list = body.find_all(element_to_search, {type_to_search: class_or_id_to_search})
+            else:
+                continue
+            current_try += 1
+
+        if current_try <= n_tries:
+            for product in products_list:
+                product_text = product.get_text()
+                if product_name in product_text:
+                    product_element = product_text
 
     else:
 
         print("INFO: Mode singular check")
 
         product = body.find(element_to_search, {type_to_search: class_or_id_to_search})
+
+        current_try = 0
         while product is None:
-            print("INFO: Product not found, waiting " + waiting_time + "s and restarting the search...")
-            time.sleep(waiting_time)
-            soup = BeautifulSoup(driver.page_source, features="lxml")
-            body = soup.body
-            product = body.find(element_to_search, {type_to_search: class_or_id_to_search})
+            if current_try <= n_tries:
+                print("DEBUG: CURRENT TRY " + str(current_try))
+                print("INFO: Product not found, waiting " + waiting_time + "s and restarting the search...")
+                time.sleep(waiting_time)
+                soup = BeautifulSoup(driver.page_source, features="lxml")
+                body = soup.body
+                product = body.find(element_to_search, {type_to_search: class_or_id_to_search})
+            else:
+                continue
+            current_try += 1
+
         product_element = product.get_text()
 
     print(product_element)
-    if not_in_stock_text not in product_element:
-        print("INFO: STOCK AVAILABLE ✅")
-        now = datetime.now()
-        store_log_data["time_found"] = now.strftime(time_format)
-        store_log_data["found"] = True
+    if product_element is not None:
+        if not_in_stock_text not in product_element:
+            print("INFO: STOCK AVAILABLE ✅")
+            now = datetime.now()
+            store_log_data["time_found"] = now.strftime(time_format)
+            store_log_data["found"] = True
+        else:
+            print("INFO: Stock not available ❌")
+            store_log_data["found"] = False
+
+        store_log_data["warning"] = None
     else:
-        print("INFO: Stock not available ❌")
-        store_log_data["found"] = False
+        print("WARNING: No product found inside the store " + store_name)
+        store_log_data["warning"] = "No product found"
 
     now = datetime.now()
     store_log_data["last_check"] = now.strftime(time_format)

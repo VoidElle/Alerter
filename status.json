@@ -1,50 +1,50 @@
 {
-  "AMD STORE": {
-    "found": false,
-    "price_found": null,
-    "time_found": null,
-    "last_check": null
-  },
-  "CASEKING": {
-    "found": false,
-    "price_found": null,
-    "time_found": null,
-    "last_check": null
-  },
-  "ALZASTORE": {
-    "found": false,
-    "price_found": null,
-    "time_found": null,
-    "last_check": null
-  },
-  "OLLOSTORE": {
-    "found": false,
-    "price_found": null,
-    "time_found": null,
-    "last_check": null
-  },
-  "CYBERTEK": {
-    "found": false,
-    "price_found": null,
-    "time_found": null,
-    "last_check": null
-  },
-  "BRACK.CH": {
-    "found": false,
-    "price_found": null,
-    "time_found": null,
-    "last_check": null
-  },
-  "CLOUDMARKT": {
-    "found": false,
-    "price_found": null,
-    "time_found": null,
-    "last_check": null
-  },
-  "LDLC": {
-    "found": false,
-    "price_found": null,
-    "time_found": null,
-    "last_check": null
-  }
+    "AMD STORE": {
+        "found": false,
+        "actual_price": null,
+        "time_found": null,
+        "last_check": "01/04/2023 12:50:05"
+    },
+    "CASEKING": {
+        "found": false,
+        "actual_price": null,
+        "time_found": null,
+        "last_check": "01/04/2023 12:50:08"
+    },
+    "ALZASTORE": {
+        "found": false,
+        "actual_price": null,
+        "time_found": null,
+        "last_check": "01/04/2023 12:50:10"
+    },
+    "OLLOSTORE": {
+        "found": false,
+        "actual_price": null,
+        "time_found": null,
+        "last_check": "01/04/2023 12:50:14"
+    },
+    "CYBERTEK": {
+        "found": false,
+        "actual_price": null,
+        "time_found": null,
+        "last_check": "01/04/2023 12:50:16"
+    },
+    "BRACK.CH": {
+        "found": false,
+        "actual_price": null,
+        "time_found": null,
+        "last_check": "01/04/2023 12:50:18"
+    },
+    "CLOUDMARKT": {
+        "found": false,
+        "actual_price": null,
+        "time_found": null,
+        "last_check": "01/04/2023 12:50:20"
+    },
+    "LDLC": {
+        "found": false,
+        "actual_price": null,
+        "time_found": null,
+        "last_check": "01/04/2023 12:50:21"
+    }
 }

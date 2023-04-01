@@ -1,6 +1,7 @@
 import json
 import time
 
+from datetime import datetime
 from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 
@@ -12,10 +13,16 @@ config_file = open('config.json', encoding='utf-8')
 config_data = json.load(config_file)
 config_file.close()
 
+log_file_read = open("status.json", encoding="utf-8")
+log_file_data = json.load(log_file_read)
+log_file_read.close()
+
 waiting_time = config_data["waiting_time_s"]
 stores = config_data["stores"]
 
 driver = uc.Chrome()
+
+time_format = "%d/%m/%Y %H:%M:%S"
 
 for store in stores:
 
@@ -27,6 +34,8 @@ for store in stores:
     type_to_search = store["type_to_search"]
     class_or_id_to_search = store["class_or_id_to_search"]
     is_list = store["is_list"]
+
+    store_log_data = log_file_data[store_name]
 
     driver.get(store_link)
 
@@ -68,8 +77,18 @@ for store in stores:
 
     if not_in_stock_text not in product_element:
         print("INFO: STOCK AVAILABLE ✅")
-        print(product_element)
+        now = datetime.now()
+        store_log_data["time_found"] = now.strftime(time_format)
+        store_log_data["found"] = True
     else:
         print("INFO: Stock not available ❌")
+        store_log_data["found"] = False
+
+    now = datetime.now()
+    store_log_data["last_check"] = now.strftime(time_format)
+
+    log_json_object = json.dumps(log_file_data, indent=4)
+    with open("status.json", "w") as outfile:
+        outfile.write(log_json_object)
 
     print("=========================")

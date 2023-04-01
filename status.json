@@ -1,56 +1,48 @@
 {
     "AMD STORE": {
         "found": false,
-        "actual_price": null,
         "time_found": null,
         "last_check": "01/04/2023 14:33:04",
         "warning": null
     },
     "CASEKING": {
         "found": false,
-        "actual_price": null,
         "time_found": null,
         "last_check": "01/04/2023 14:33:07",
         "warning": null
     },
     "ALZASTORE": {
         "found": false,
-        "actual_price": null,
         "time_found": null,
         "last_check": "01/04/2023 14:33:09",
         "warning": null
     },
     "OLLOSTORE": {
         "found": false,
-        "actual_price": null,
         "time_found": null,
         "last_check": "01/04/2023 14:33:16",
         "warning": null
     },
     "CYBERTEK": {
         "found": false,
-        "actual_price": null,
         "time_found": null,
         "last_check": "01/04/2023 14:33:18",
         "warning": null
     },
     "BRACK.CH": {
         "found": false,
-        "actual_price": null,
         "time_found": null,
         "last_check": "01/04/2023 14:33:20",
         "warning": null
     },
     "CLOUDMARKT": {
         "found": false,
-        "actual_price": null,
         "time_found": null,
         "last_check": "01/04/2023 14:33:22",
         "warning": null
     },
     "LDLC": {
         "found": false,
-        "actual_price": null,
         "time_found": null,
         "last_check": "01/04/2023 14:33:23",
         "warning": null

@@ -93,7 +93,6 @@ for store in stores:
 
         product_element = product.get_text()
 
-    print(product_element)
     if product_element is not None:
         if not_in_stock_text not in product_element:
             print("INFO: STOCK AVAILABLE ✅")

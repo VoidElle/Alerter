@@ -2,12 +2,9 @@ import json
 import time
 
 from datetime import datetime
-from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 
 import undetected_chromedriver as uc
-
-load_dotenv()
 
 config_file = open('config.json', encoding='utf-8')
 config_data = json.load(config_file)
@@ -56,7 +53,6 @@ for store in stores:
         current_try = 0
         while products_list is None:
             if current_try <= n_tries:
-                print("DEBUG: CURRENT TRY " + str(current_try))
                 print("INFO: Product not found, waiting " + waiting_time + "s and restarting the search...")
                 time.sleep(waiting_time)
                 soup = BeautifulSoup(driver.page_source, features="lxml")
@@ -81,7 +77,6 @@ for store in stores:
         current_try = 0
         while product is None:
             if current_try <= n_tries:
-                print("DEBUG: CURRENT TRY " + str(current_try))
                 print("INFO: Product not found, waiting " + waiting_time + "s and restarting the search...")
                 time.sleep(waiting_time)
                 soup = BeautifulSoup(driver.page_source, features="lxml")

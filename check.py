@@ -3,6 +3,8 @@ import time
 
 from datetime import datetime
 from bs4 import BeautifulSoup
+from selenium.webdriver.chrome.options import Options
+from pyvirtualdisplay import Display
 
 import undetected_chromedriver as uc
 
@@ -19,7 +21,13 @@ n_tries = config_data["n_tries"]
 
 stores = config_data["stores"]
 
-driver = uc.Chrome()
+options = Options()
+options.add_argument('--no-sandbox')
+
+display = Display(visible=False, size=(800, 800))
+display.start()
+
+driver = uc.Chrome(options=options)
 
 time_format = "%d/%m/%Y %H:%M:%S"
 

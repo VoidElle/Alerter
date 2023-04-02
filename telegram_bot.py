@@ -23,6 +23,13 @@ Orario: %time_found%
 Link: %link%
 =======⚠️======="""
 
+warning_text = """
+=======⚠️=======
+STATUS: WARNING
+Store: %store_name%
+Warning: %warning%
+=======⚠️======="""
+
 time_format = "%d/%m/%Y %H:%M:%S"
 
 
@@ -46,6 +53,12 @@ def main():
         store_found_time = store_loaded["time_found"]
         store_found_link = store_loaded["link"]
         store_message_sent = store_loaded["message_sent"]
+        store_warning = store_loaded["warning"]
+
+        if store_warning is not None:
+            new_warning_text = warning_text.replace("%warning%", store_warning).replace("%store_name%", store_name)
+            send_to_telegram(new_warning_text)
+            continue
 
         if store_found_status:
 
@@ -66,6 +79,7 @@ def main():
                     log_json_object = json.dumps(log_file_data, indent=4)
                     with open("status.json", "w") as outfile:
                         outfile.write(log_json_object)
+
             elif store_message_sent is None:
 
                 new_alert_text = alert_text.replace("%store_name%", store_name).replace("%time_found%", store_found_time).replace("%link%", store_found_link)

@@ -8,11 +8,14 @@ from pyvirtualdisplay import Display
 
 import undetected_chromedriver as uc
 
-config_file = open('config.json', encoding='utf-8')
+CONFIG_FILE_PATH = "./config.json"
+STATUS_FILE_PATH = "./status.json"
+
+config_file = open(CONFIG_FILE_PATH, encoding='utf-8')
 config_data = json.load(config_file)
 config_file.close()
 
-log_file_read = open("status.json", encoding="utf-8")
+log_file_read = open(STATUS_FILE_PATH, encoding="utf-8")
 log_file_data = json.load(log_file_read)
 log_file_read.close()
 
@@ -116,7 +119,7 @@ for store in stores:
     store_log_data["last_check"] = now.strftime(time_format)
 
     log_json_object = json.dumps(log_file_data, indent=4)
-    with open("status.json", "w") as outfile:
+    with open(STATUS_FILE_PATH, "w") as outfile:
         outfile.write(log_json_object)
 
     print("=========================")

@@ -11,7 +11,9 @@ load_dotenv()
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.getenv("TELEGRAM_USER_ID")
 
-log_file_read = open("status.json", encoding="utf-8")
+STATUS_FILE_PATH = "./status.json"
+
+log_file_read = open(STATUS_FILE_PATH, encoding="utf-8")
 log_file_data = json.load(log_file_read)
 log_file_read.close()
 
@@ -64,7 +66,7 @@ def main():
             store_loaded["message_sent"] = now.strftime(time_format)
 
             log_json_object = json.dumps(log_file_data, indent=4)
-            with open("status.json", "w") as outfile:
+            with open(STATUS_FILE_PATH, "w") as outfile:
                 outfile.write(log_json_object)
 
             continue
@@ -86,7 +88,7 @@ def main():
                     store_loaded["message_sent"] = now.strftime(time_format)
 
                     log_json_object = json.dumps(log_file_data, indent=4)
-                    with open("status.json", "w") as outfile:
+                    with open(STATUS_FILE_PATH, "w") as outfile:
                         outfile.write(log_json_object)
 
             elif store_message_sent is None:
@@ -98,7 +100,7 @@ def main():
                 store_loaded["message_sent"] = now.strftime(time_format)
 
                 log_json_object = json.dumps(log_file_data, indent=4)
-                with open("status.json", "w") as outfile:
+                with open(STATUS_FILE_PATH, "w") as outfile:
                     outfile.write(log_json_object)
 
 

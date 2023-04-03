@@ -1,3 +1,4 @@
+<a name="readme-top"></a>
 # Alerter
 Alerter is a python based stock monitoring bot.
 It's a customizable and automated solution for tracking product availability across multiple websites. 

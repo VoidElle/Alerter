@@ -1,0 +1,74 @@
+{
+    "RUE DU COMMERCE": {
+        "found": false,
+        "time_found": null,
+        "last_check": "03/04/2023 15:06:12",
+        "message_sent": null,
+        "link": "https://www.rueducommerce.fr/p-processeur-ryzen-9-7950x3d-4257-ghz-amd-3471342-18381.html",
+        "warning": null
+    },
+    "AMD STORE": {
+        "found": false,
+        "time_found": null,
+        "last_check": "03/04/2023 15:06:14",
+        "message_sent": null,
+        "link": "https://www.amd.com/en/direct-buy/it",
+        "warning": null
+    },
+    "CASEKING": {
+        "found": false,
+        "time_found": null,
+        "last_check": "03/04/2023 15:06:16",
+        "message_sent": null,
+        "link": "https://www.caseking.de/amd-ryzen-9-7950x3d-5-7-ghz-raphael-am5-boxed-hpam-259.html?__shop=2",
+        "warning": null
+    },
+    "ALZASTORE": {
+        "found": false,
+        "time_found": null,
+        "last_check": "01/04/2023 14:33:09",
+        "message_sent": null,
+        "link": "https://www.alza.cz/EN/amd-ryzen-9-7950x3d-d7665222.htm",
+        "warning": null
+    },
+    "OLLOSTORE": {
+        "found": false,
+        "time_found": null,
+        "last_check": "01/04/2023 14:33:16",
+        "message_sent": null,
+        "link": "https://www.ollo.it/amd-ryzen-9-7950x3d-4-2-ghz-128-mb-l3/p_875596?utm_campaign=tradetracker-pla&utm_medium=RedBrain%20IT&utm_source=TradeTracker",
+        "warning": null
+    },
+    "CYBERTEK": {
+        "found": false,
+        "time_found": null,
+        "last_check": "01/04/2023 14:33:18",
+        "message_sent": null,
+        "link": "https://www.cybertek.fr/processeur/amd/131118.aspx",
+        "warning": null
+    },
+    "BRACK.CH": {
+        "found": false,
+        "time_found": null,
+        "last_check": "01/04/2023 14:33:20",
+        "message_sent": null,
+        "link": "https://www.brack.ch/amd-cpu-ryzen-9-7950x3d-4-2-ghz-1520431",
+        "warning": null
+    },
+    "CLOUDMARKT": {
+        "found": false,
+        "time_found": null,
+        "last_check": "01/04/2023 14:33:22",
+        "message_sent": null,
+        "link": "https://www.cloudmarkt.de/amdprozessoren-100-100000908wof",
+        "warning": null
+    },
+    "LDLC": {
+        "found": false,
+        "time_found": null,
+        "last_check": "01/04/2023 14:33:23",
+        "message_sent": null,
+        "link": "https://www.ldlc.com/it-it/scheda/PB00544137.html",
+        "warning": null
+    }
+}

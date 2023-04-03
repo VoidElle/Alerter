@@ -22,6 +22,7 @@ n_tries = config_data["n_tries"]
 stores = config_data["stores"]
 
 options = Options()
+options.add_argument('--remote-debugging-port=9222')
 options.add_argument('--no-sandbox')
 
 display = Display(visible=False, size=(800, 800))
@@ -59,9 +60,9 @@ for store in stores:
         products_list = body.find_all(element_to_search, {type_to_search: class_or_id_to_search})
 
         current_try = 0
-        while products_list is None:
+        while products_list is None or not products_list:
             if current_try <= n_tries:
-                print("INFO: Product not found, waiting " + waiting_time + "s and restarting the search...")
+                print("INFO: Product not found, waiting " + str(waiting_time) + "s and restarting the search...")
                 time.sleep(waiting_time)
                 soup = BeautifulSoup(driver.page_source, features="lxml")
                 body = soup.body
@@ -85,7 +86,7 @@ for store in stores:
         current_try = 0
         while product is None:
             if current_try <= n_tries:
-                print("INFO: Product not found, waiting " + waiting_time + "s and restarting the search...")
+                print("INFO: Product not found, waiting " + str(waiting_time) + "s and restarting the search...")
                 time.sleep(waiting_time)
                 soup = BeautifulSoup(driver.page_source, features="lxml")
                 body = soup.body

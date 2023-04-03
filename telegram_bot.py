@@ -56,8 +56,17 @@ def main():
         store_warning = store_loaded["warning"]
 
         if store_warning is not None:
+
             new_warning_text = warning_text.replace("%warning%", store_warning).replace("%store_name%", store_name)
             send_to_telegram(new_warning_text)
+
+            now = datetime.now()
+            store_loaded["message_sent"] = now.strftime(time_format)
+
+            log_json_object = json.dumps(log_file_data, indent=4)
+            with open("status.json", "w") as outfile:
+                outfile.write(log_json_object)
+
             continue
 
         if store_found_status:

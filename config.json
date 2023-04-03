@@ -2,6 +2,16 @@
   "n_tries": 5,
   "waiting_time_s": 5,
   "stores": [
+     {
+      "store_name": "RUE DU COMMERCE",
+      "link": "https://www.rueducommerce.fr/p-processeur-ryzen-9-7950x3d-4257-ghz-amd-3471342-18381.html",
+      "product_name": "Processeur Ryzen™ 9 7950X3D - 4,2/5,7 GHz",
+      "not_in_stock_text": " Ce produit n'est pas disponible, notre équipe fait le maximum pour qu'il le soit bientôt. Inscrivez-vous pour être tenu au courant.",
+      "element_to_search": "p",
+      "type_to_search": "id",
+      "class_or_id_to_search": "product__boutique_epuise_txt",
+      "is_list": false
+    },
     {
       "store_name": "AMD STORE",
       "link": "https://www.amd.com/en/direct-buy/it",

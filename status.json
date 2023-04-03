@@ -1,8 +1,16 @@
 {
+    "RUE DU COMMERCE": {
+        "found": false,
+        "time_found": null,
+        "last_check": "03/04/2023 15:06:12",
+        "message_sent": null,
+        "link": "https://www.rueducommerce.fr/p-processeur-ryzen-9-7950x3d-4257-ghz-amd-3471342-18381.html",
+        "warning": null
+    },
     "AMD STORE": {
         "found": false,
         "time_found": null,
-        "last_check": "03/04/2023 09:03:09",
+        "last_check": "03/04/2023 15:06:14",
         "message_sent": null,
         "link": "https://www.amd.com/en/direct-buy/it",
         "warning": null
@@ -10,7 +18,7 @@
     "CASEKING": {
         "found": false,
         "time_found": null,
-        "last_check": "02/04/2023 22:01:19",
+        "last_check": "03/04/2023 15:06:16",
         "message_sent": null,
         "link": "https://www.caseking.de/amd-ryzen-9-7950x3d-5-7-ghz-raphael-am5-boxed-hpam-259.html?__shop=2",
         "warning": null
